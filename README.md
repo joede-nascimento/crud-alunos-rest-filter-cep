@@ -1,6 +1,13 @@
 # CrudAlunos
+Projeto para consumir uma API-REST com angular 8, a aplicação tem nuscar por CEP via API-rest, filtro(pipe) por nome na tabela de alunos e conta com um get para popular o select de estados
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.1.
+
+## Para executar o projeto
+
+é necessario inicializar o json-server, bastando apenas digitar no terminal -> `json-server --watch db.json`
+
+caso seja necessario instale o json-serve na maquina com o seguinte comando no terminal -> `npm install -g json-server`
 
 ## Development server
 
