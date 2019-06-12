@@ -1,0 +1,112 @@
+<form [formGroup]="formulario" (ngSubmit)="adicionarAluno()" class="local-margin-top">
+  <div class="form-row">
+  
+    <div class="form-group col-sm-6">
+      <label for="nome">Nome<span class="requerido">*</span></label>
+      <input type="text" formControlName="nome" class="form-control" id="nome">
+      <div class="alert alert-danger" role="alert" 
+      *ngIf="mostraErro(formulario.get('nome'))">
+        O campo nome é obrigatório
+      </div>
+    </div>
+
+    <div class="form-group col-sm-6">
+      <label for="curso">Curso<span class="requerido">*</span></label>
+       <input type="text" formControlName="curso" class="form-control" id="curso">
+       <div class="alert alert-danger" role="alert" 
+       *ngIf="mostraErro(formulario.get('curso'))">
+         O camppo curso é obrigatório
+       </div>
+     </div>
+
+  </div>
+    
+  <div class="form-row">
+
+      <div class="form-group col-sm-6">
+        <label for="idade">Idade<span class="requerido">*</span></label>
+        <input type="number" formControlName="idade" class="form-control" id="idade">
+        <div class="alert alert-danger" role="alert" 
+        *ngIf="mostraErro(formulario.get('idade'))">
+          O campo idade é obrigatório
+        </div>
+      </div>
+
+      <div class="form-group form-check col-sm-6 pai-checkbox-margin">
+        <input type="checkbox" formControlName="deficiente" class="form-check-input input-checkbox-margin" id="deficiente">
+        <label class="form-check-label label-checkbox-margin" for="deficiente">Deficiente</label>
+       
+      </div>
+      
+  </div>
+
+  <div class="form-row">
+
+      <div class="form-group col-sm-6">
+        <label for="cep">Cep<span class="requerido">*</span></label>
+        <input type="text" (blur)="buscaCep()" formControlName="cep" class="form-control" id="cep">
+        <div class="alert alert-danger" role="alert" 
+        *ngIf="mostraErro(formulario.get('cep'))">
+          O campo cep é obrigatório
+        </div>  
+      </div>
+
+      <div class="form-group col-sm-6">
+          <label for="rua">Rua<span class="requerido">*</span></label>
+          <input type="text" formControlName="rua" class="form-control" id="rua">
+          <div class="alert alert-danger" role="alert" 
+        *ngIf="mostraErro(formulario.get('rua'))">
+          O campo rua é obrigatório
+        </div>  
+      </div>
+
+  </div>
+
+  <div class="form-row">
+      <div class="form-group col-sm-6">
+        <label for="bairro">Bairro<span class="requerido">*</span></label>
+        <input type="text" formControlName="bairro" class="form-control" id="bairro">
+        <div class="alert alert-danger" role="alert" 
+        *ngIf="mostraErro(formulario.get('bairro'))">
+          O campo bairro é obrigatório
+        </div>  
+      </div>
+
+      <div class="form-group col-sm-6">
+        <label for="cidade">Cidade<span class="requerido">*</span></label>
+        <input type="text" formControlName="cidade" class="form-control" id="cidade">
+        <div class="alert alert-danger" role="alert" 
+        *ngIf="mostraErro(formulario.get('cidade'))">
+          O campo cidade é obrigatório
+        </div>  
+      </div>
+  </div>
+   
+  <div class="form-row">
+      <div class="form-group col-sm-6">
+          <label for="cidade">Estado<span class="requerido">*</span></label>
+          <select formControlName="estado"  class="custom-select">
+            <option *ngFor="let estado of estados" [value]='estado.sigla'>{{ estado.nome }}</option>
+          </select>
+          <div class="alert alert-danger" role="alert" 
+          *ngIf="mostraErro(formulario.get('estado'))">
+          O campo estado é obrigatório
+        </div>  
+      </div>
+     
+  </div>
+    
+    <button type="submit" [disabled]="formulario.invalid" class="btn btn-primary">Submit</button>
+</form>
+
+<div class="alert alert-success local-margin-top" role="alert"
+*ngIf="msg == 'success'">
+  O {{ nomeAluno }} for adicionado com sucesso
+</div>
+
+<div class="alert alert-danger local-margin-top" role="alert"
+*ngIf="msg == 'error'">
+  :( erro ao tentar adicionar aluno
+</div>
+
+

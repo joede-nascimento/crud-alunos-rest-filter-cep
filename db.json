@@ -1,0 +1,52 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "maria",
+      "curso": "Angular 7",
+      "idade": 24,
+      "deficiente": false,
+      "cep": "07991040",
+      "rua": "Rua Silva",
+      "bairro": "Jardim Itu",
+      "cidade": "Jundiaí",
+      "estado": "São Paulo"
+    },
+    {
+      "id": 2,
+      "nome": "jose",
+      "curso": "PHP",
+      "idade": 52,
+      "deficiente": true,
+      "cep": "07991041",
+      "rua": "Rua 2",
+      "bairro": "Rosas",
+      "cidade": "Caieiras",
+      "estado": "São Paulo 2"
+    },
+    {
+      "id": 3,
+      "nome": "mauricio",
+      "curso": "Java",
+      "idade": 20,
+      "deficiente": false,
+      "cep": "07991042",
+      "rua": "Rua seis",
+      "bairro": "Novo Horizontea",
+      "cidade": "Perus",
+      "estado": "São Paulo 3"
+    },
+    {
+      "nome": "Leonardo2",
+      "curso": "Mecanica2",
+      "idade": 42,
+      "deficiente": false,
+      "cep": "01001000",
+      "rua": "Praça da Sé",
+      "bairro": "Sé",
+      "cidade": "São Paulo",
+      "estado": "SP",
+      "id": 4
+    }
+  ]
+}

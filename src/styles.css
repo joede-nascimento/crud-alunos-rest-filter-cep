@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.pai-checkbox-margin{
+    padding-top: 37px;
+}
+.input-checkbox-margin{
+    margin-left: 0px;
+}
+.label-checkbox-margin{
+    margin-left: 20px;
+}
+.requerido{
+    color: red;
+}
+
+.ng-invalid.ng-touched:not(form){
+    border: 1px solid red;
+}
+
+.local-margin-top{
+    margin-top: 30px;
+}
